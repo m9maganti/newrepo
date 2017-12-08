@@ -5,7 +5,7 @@ properties([
     displayName: '',
     projectUrlStr: 'https://github.com/m9maganti/newrepo.git/'],
     pipelineTriggers([githubPush()])])
-node {
+pipeline {
   stage 'build'
   echo 'build now'
   stage 'test'
