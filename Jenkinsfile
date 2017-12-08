@@ -6,10 +6,25 @@ properties([
     projectUrlStr: 'https://github.com/m9maganti/newrepo.git/'],
     pipelineTriggers([githubPush()])])
 pipeline {
-  stage 'build'
-  echo 'build now'
-  stage 'test'
-  echo 'do now'
-  stage 'deploy'
-  echo 'avengers'
+    agent any 
+
+    stages {
+        stage('Build') { 
+            steps { 
+                sh 'pwd' 
+            }
+        }
+        stage('Test'){
+            steps {
+                sh 'java -version'
+                
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh 'ls'
+                sh 'pwd'
+            }
+        }
+    }
 }
