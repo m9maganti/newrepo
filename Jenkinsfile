@@ -1,4 +1,3 @@
-//task 5 /////
 #!/usr/bin/env groovy
 properties([
     [$class: 'GithubProjectProperty',
